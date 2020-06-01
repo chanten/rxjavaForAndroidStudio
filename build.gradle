@@ -3,6 +3,13 @@ repositories {
     jcenter()
 }
 
+/* The below options is made to build UTF8 java file build */
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     testCompile 'junit:junit:4.12'
